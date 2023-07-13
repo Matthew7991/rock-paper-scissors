@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Rock / paar Bier / Sister</title>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1>Rock Paper Scissors</h1>
+				<div class="rounds">
+					<h2>How many rounds?</h2>
+					<div class="round-input">
+						<div>
+							<input
+								type="radio"
+								name="roundsCount"
+								id="round5"
+								value="5"
+								checked
+							/>
+							<label for="round5">5</label>
+						</div>
+						<div>
+							<input type="radio" name="roundsCount" id="round10" value="10" />
+							<label for="round10">10</label>
+						</div>
+						<div>
+							<input type="radio" name="roundsCount" id="round15" value="15" />
+							<label for="round15">15</label>
+						</div>
+						<div>
+							<input type="radio" name="roundsCount" id="round20" value="20" />
+							<label for="round20">20</label>
+						</div>
+					</div>
+					<div class="rounds-output hidden">
+						<p class="round-counter">0 / 0</p>
+					</div>
+				</div>
+				<div class="scores">
+					<p>USER</p>
+					<p class="score">0 : 0</p>
+					<p>COMP</p>
+				</div>
+				<p class="output">Let's Play</p>
+				<div class="buttons">
+					<button value="0"></button>
+					<button value="1"></button>
+					<button value="2"></button>
+				</div>
+				<p>MAKE YOUR MOVE.</p>
+				<button class="reset">restart</button>
+			</section>
+		</main>
+
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+@use "./reset.scss";
+
+.hidden {
+  display: none;
+}
+
+.buttons button {
+  width: 64px;
+  aspect-ratio: 1;
+  border: none;
+}
+
+button[value="0"] {
+  background-image: url(../img/rock.png);
+}
+button[value="1"] {
+  background-image: url(../img/beers.png);
+}
+button[value="2"] {
+  background-image: url(../img/sister.png);
+}
