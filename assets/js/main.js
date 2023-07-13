@@ -45,6 +45,8 @@ function rpsReset() {
   scoreComputerValue = 0
   score.textContent = `${scoreUserValue} : ${scoreComputerValue}`
 
+  textOutput.textContent = "Let's Play"
+
   rpsBtns.forEach(btn => btn.addEventListener("click", rpsInit))
 }
 
