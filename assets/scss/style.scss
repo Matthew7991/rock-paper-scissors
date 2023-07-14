@@ -34,14 +34,9 @@ h1 {
 }
 
 .round-input {
-  // margin: 0 auto;
-  // margin-top: 32px;
-  // width: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // padding: 16px;
-  // border: white 2px solid;
 
   h2 {
     font-size: 1.5rem;
@@ -104,19 +99,10 @@ h1 {
   justify-content: center;
 
   button {
-    width: 96px;
     aspect-ratio: 1;
     border: black 4px solid;
     border-radius: 50%;
-    // &[value="0"] {
-    //   background: url(../img/rock.png) no-repeat center, var(--color-whiteish) ;
-    // }
-    // &[value="1"] {
-    //   background: url(../img/beers.png) no-repeat center, var(--color-whiteish);
-    // }
-    // &[value="2"] {
-    //   background: url(../img/sister.png) no-repeat center, var(--color-whiteish);
-    // }
+    padding: 16px;
   }
 }
 
