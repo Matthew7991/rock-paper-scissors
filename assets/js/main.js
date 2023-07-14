@@ -1,12 +1,29 @@
 "use strict";
 
-
-const choices = ["Rock", "par Bier", "Sister"]
-const choiceAmounts = choices.length
-
 // rounds
 const roundsInput = document.querySelector(".rounds-input")
 const roundsOutput = document.querySelector(".rounds-output")
+
+function createInputRadios(amount, steps) {
+  for (let i = 0; i < amount; i++) {
+    const inputRadioTemplate = 
+    `<div>
+      <input
+        type="radio"
+        name="roundsCount"
+        id="round${i*steps+5}"
+        value="${i*steps+5}"
+      />
+      <label for="round${i*steps+5}">${i*steps+5}</label>
+    </div>`
+    roundsInput.insertAdjacentHTML("beforeend", inputRadioTemplate)
+  }
+  document.querySelector("[name='roundsCount'").checked = true
+}
+
+createInputRadios(4,5)
+
+console.log( document.querySelector("[name='roundsCount'").setAttribute("checked", ""))
 
 // Round Counter
 const roundCounter = document.querySelector(".rounds-counter")
@@ -23,6 +40,10 @@ const textOutput = document.querySelector(".output")
 
 //  Buttons
 const rpsBtns = document.querySelectorAll(".buttons button")
+
+const choices = ["Rock", "par Bier", "Sister"]
+const choiceAmounts = rpsBtns.length
+
 
 function toggleRoundsDisplay() {
   roundsInput.classList.toggle("hidden")
@@ -49,7 +70,6 @@ function rps(event) {
 
   roundCurrentValue++
   setRoundDisplay()
-
 
   const computerChoice = Math.floor(Math.random() * choiceAmounts)
   const userChoice = Number(event.target.closest("button").value)
