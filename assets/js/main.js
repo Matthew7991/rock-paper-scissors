@@ -1,6 +1,9 @@
 "use strict";
 
 
+const choices = ["Rock", "par Bier", "Sister"]
+const choiceAmounts = choices.length
+
 // rounds
 const roundsInput = document.querySelector(".rounds-input")
 const roundsOutput = document.querySelector(".rounds-output")
@@ -8,7 +11,7 @@ const roundsOutput = document.querySelector(".rounds-output")
 // Round Counter
 const roundCounter = document.querySelector(".rounds-counter")
 let roundCurrentValue = 0
-let roundMaxValue
+let roundMaxValue = 0
 
 // Score
 const score = document.querySelector(".score")
@@ -19,50 +22,37 @@ let scoreComputerValue = 0
 const textOutput = document.querySelector(".output")
 
 //  Buttons
-const radioBtns = document.querySelectorAll('input[type="radio"]')
 const rpsBtns = document.querySelectorAll(".buttons button")
 
-function rpsInit() {
-  roundsInput.classList.add("hidden")
-  roundsOutput.classList.remove("hidden")
-  radioBtns.forEach(btn => {
-    if (btn.checked) {
-      roundMaxValue = Number(btn.value)
-    }
-  })
-  roundCounter.textContent = `${roundCurrentValue} / ${roundMaxValue}`
-
-  rpsBtns.forEach(btn => btn.removeEventListener("click", rpsInit))
+function toggleRoundsDisplay() {
+  roundsInput.classList.toggle("hidden")
+  roundsOutput.classList.toggle("hidden")
 }
 
-function rpsReset() {
-  roundsInput.classList.remove("hidden")
-  roundsOutput.classList.add("hidden")
+function setRoundDisplay() {
+  roundCounter.textContent = `${roundCurrentValue} / ${roundMaxValue}`
+}
 
-  roundCurrentValue = 0
-
-  scoreUserValue = 0
-  scoreComputerValue = 0
+function setScoreDisplay() {
   score.textContent = `${scoreUserValue} : ${scoreComputerValue}`
-
-  textOutput.textContent = "Let's Play"
-
-  rpsBtns.forEach(btn => btn.addEventListener("click", rpsInit))
 }
 
 function rps(event) {
-  if (roundCurrentValue == roundMaxValue) {
+  if (roundCurrentValue == roundMaxValue && roundMaxValue != 0) {
     return
+  }
+  
+  if (roundMaxValue == 0) {
+    toggleRoundsDisplay()
+    roundMaxValue = Number(document.querySelectorAll('input[type="radio"]:checked')[0].value)
   }
 
   roundCurrentValue++
-  roundCounter.textContent = `${roundCurrentValue} / ${roundMaxValue}`
+  setRoundDisplay()
 
-  const choices = ["Rock", "par Bier", "Sister"]
-  const choiceAmounts = rpsBtns.length
 
   const computerChoice = Math.floor(Math.random() * choiceAmounts)
-  const userChoice = Number(event.target.value)
+  const userChoice = Number(event.target.closest("button").value)
 
   const winner = (userChoice - computerChoice + choiceAmounts) % choiceAmounts
 
@@ -76,7 +66,7 @@ function rps(event) {
   scoreComputerValue++
   }
 
-  score.textContent = `${scoreUserValue} : ${scoreComputerValue}`
+  setScoreDisplay()
 
   if (roundCurrentValue == roundMaxValue || scoreUserValue > roundMaxValue / 2 || scoreComputerValue > roundMaxValue / 2) {
     if (scoreUserValue == scoreComputerValue) {
@@ -89,13 +79,25 @@ function rps(event) {
   }
 }
 
+function rpsReset() {
+  if (roundMaxValue == 0) {
+    return
+  }
+  toggleRoundsDisplay()
+
+  roundCurrentValue = 0
+  scoreUserValue = 0
+  scoreComputerValue = 0
+  roundMaxValue = 0
+  setScoreDisplay()
+  setRoundDisplay()
+
+  textOutput.textContent = "Let's Play"
+}
+
 // Event Listeners
-rpsBtns.forEach(btn => btn.addEventListener("click", rpsInit))
 document.querySelector(".reset").addEventListener("click", rpsReset)
 rpsBtns.forEach(btn => btn.addEventListener("click", rps))
 
-// See if more things can be put in own function
-// for example: end of game check; text output(round Counter, scores); getting roundMaxValue
 // get value from label instead of input value
 // assemble input and label with javascript from template with steps and count aka 4 buttons in steps of 5
-// can roundsInput.classList be changed to toggle ?
