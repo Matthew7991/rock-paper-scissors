@@ -71,25 +71,21 @@ ol {
   --color-greyish: rgb(106, 106, 106);
 }
 
-body {
+.rpc-game {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-section {
   background-color: var(--color-blackish);
   color: var(--color-whiteish);
   height: 100vh;
 }
-
-h1 {
+.rpc-game h1 {
   font-size: 5rem;
   background-color: var(--color-whiteish);
   color: rgb(106, 106, 106);
   font-weight: 400;
 }
 
-.rounds {
+.rpc-rounds {
   margin: 0 auto;
   margin-top: 32px;
   width: 300px;
@@ -97,21 +93,21 @@ h1 {
   border: white 2px solid;
 }
 
-.round-input {
+.rpc-round-input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.round-input h2 {
+.rpc-round-input h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
 }
-.round-input div {
+.rpc-round-input div {
   width: 50%;
   text-align: start;
 }
 
-.round-counter {
+.rpc-round-counter {
   font-size: 2.5rem;
 }
 
@@ -119,7 +115,7 @@ h1 {
   display: none;
 }
 
-.scores {
+.rpc-scores {
   display: flex;
   width: 300px;
   margin: 0 auto;
@@ -131,38 +127,47 @@ h1 {
   position: relative;
   padding: 16px;
 }
-.scores .tag {
+.rpc-scores .score-tag {
   position: absolute;
   background-color: red;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 1.5rem;
 }
-.scores p:nth-of-type(1) {
+.rpc-scores p:nth-of-type(1) {
   left: 0;
   transform: translateX(-50%);
 }
-.scores p:nth-of-type(3) {
+.rpc-scores p:nth-of-type(3) {
   right: 0;
   transform: translateX(50%);
 }
 
-.output {
+.rpc-output {
   font-size: 2rem;
   margin-top: 32px;
 }
 
-.buttons {
+.rpc-choice-buttons {
   margin-top: 32px;
   display: flex;
   gap: 32px;
   justify-content: center;
 }
-.buttons button {
+.rpc-choice-buttons button {
   aspect-ratio: 1;
   border: black 4px solid;
   border-radius: 50%;
   padding: 16px;
+}
+.rpc-choice-buttons .rpc-win {
+  background-color: green;
+}
+.rpc-choice-buttons .rpc-loose {
+  background-color: red;
+}
+.rpc-choice-buttons .rpc-draw {
+  background-color: grey;
 }
 
 section > p:not(.output) {
@@ -171,7 +176,7 @@ section > p:not(.output) {
   font-weight: 600;
 }
 
-.reset {
+.rpc-reset {
   background: none;
   border: none;
   text-decoration: underline;

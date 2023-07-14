@@ -8,45 +8,22 @@
 	</head>
 	<body>
 		<main>
-			<section>
+			<section class="rpc-game">
 				<h1>Rock / paar Bier / Sister</h1>
-				<div class="rounds">
+				<div class="rpc-rounds">
 					<h2>How many rounds?</h2>
-					<div class="rounds-input">
-						<!-- <div>
-							<input
-								type="radio"
-								name="roundsCount"
-								id="round5"
-								value="5"
-								checked
-							/>
-							<label for="round5">5</label>
-						</div>
-						<div>
-							<input type="radio" name="roundsCount" id="round10" value="10" />
-							<label for="round10">10</label>
-						</div>
-						<div>
-							<input type="radio" name="roundsCount" id="round15" value="15" />
-							<label for="round15">15</label>
-						</div>
-						<div>
-							<input type="radio" name="roundsCount" id="round20" value="20" />
-							<label for="round20">20</label>
-						</div> -->
-					</div>
-					<div class="rounds-output hidden">
-						<p class="rounds-counter">0 / 0</p>
+					<div class="rpc-rounds-input"></div>
+					<div class="rpc-rounds-output hidden">
+						<p class="rpc-rounds-counter">0 / 0</p>
 					</div>
 				</div>
-				<div class="scores">
-					<p class="tag">USER</p>
-					<p class="score">0 : 0</p>
-					<p class="tag">COMP</p>
+				<div class="rpc-scores">
+					<p class="score-tag">USER</p>
+					<p class="rpc-score">0 : 0</p>
+					<p class="score-tag">COMP</p>
 				</div>
-				<p class="output">Let's Play</p>
-				<div class="buttons">
+				<p class="rpc-output">Let's Play</p>
+				<div class="rpc-choice-buttons">
 					<button value="0">
 						<img src="./assets/img/rock.png" alt="Rock" />
 					</button>
@@ -57,9 +34,8 @@
 						<img src="./assets/img/sister.png" alt="Sister" />
 					</button>
 				</div>
-
 				<p>MAKE YOUR MOVE.</p>
-				<button class="reset">restart</button>
+				<button class="rpc-reset">restart</button>
 			</section>
 		</main>
 
