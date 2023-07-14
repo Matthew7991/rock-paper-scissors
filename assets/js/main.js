@@ -11,9 +11,9 @@ function createInputRadios(amount, steps) {
         <input
           type="radio"
           name="roundsCount"
-          id="round${i*steps+5}"
+          id="round${i*steps+steps}"
         />
-        <label for="round${i*steps+5}">${i*steps+5}</label>
+        <label for="round${i*steps+steps}">${i*steps+steps}</label>
       </div>`
     roundsInput.insertAdjacentHTML("beforeend", inputRadioTemplate)
   }
