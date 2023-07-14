@@ -164,15 +164,6 @@ h1 {
   border: black 4px solid;
   border-radius: 50%;
 }
-.buttons button[value="0"] {
-  background: url(../img/rock.png) no-repeat center, var(--color-whiteish);
-}
-.buttons button[value="1"] {
-  background: url(../img/beers.png) no-repeat center, var(--color-whiteish);
-}
-.buttons button[value="2"] {
-  background: url(../img/sister.png) no-repeat center, var(--color-whiteish);
-}
 
 section > p:not(.output) {
   font-size: 1.2rem;

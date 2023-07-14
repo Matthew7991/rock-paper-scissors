@@ -108,15 +108,15 @@ h1 {
     aspect-ratio: 1;
     border: black 4px solid;
     border-radius: 50%;
-    &[value="0"] {
-      background: url(../img/rock.png) no-repeat center, var(--color-whiteish) ;
-    }
-    &[value="1"] {
-      background: url(../img/beers.png) no-repeat center, var(--color-whiteish);
-    }
-    &[value="2"] {
-      background: url(../img/sister.png) no-repeat center, var(--color-whiteish);
-    }
+    // &[value="0"] {
+    //   background: url(../img/rock.png) no-repeat center, var(--color-whiteish) ;
+    // }
+    // &[value="1"] {
+    //   background: url(../img/beers.png) no-repeat center, var(--color-whiteish);
+    // }
+    // &[value="2"] {
+    //   background: url(../img/sister.png) no-repeat center, var(--color-whiteish);
+    // }
   }
 }
 

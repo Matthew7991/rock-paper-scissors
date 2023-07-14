@@ -2,11 +2,11 @@
 
 
 // rounds
-const roundsInput = document.querySelector(".round-input")
+const roundsInput = document.querySelector(".rounds-input")
 const roundsOutput = document.querySelector(".rounds-output")
 
 // Round Counter
-const roundCounter = document.querySelector(".round-counter")
+const roundCounter = document.querySelector(".rounds-counter")
 let roundCurrentValue = 0
 let roundMaxValue
 
@@ -93,3 +93,9 @@ function rps(event) {
 rpsBtns.forEach(btn => btn.addEventListener("click", rpsInit))
 document.querySelector(".reset").addEventListener("click", rpsReset)
 rpsBtns.forEach(btn => btn.addEventListener("click", rps))
+
+// See if more things can be put in own function
+// for example: end of game check; text output(round Counter, scores); getting roundMaxValue
+// get value from label instead of input value
+// assemble input and label with javascript from template with steps and count aka 4 buttons in steps of 5
+// can roundsInput.classList be changed to toggle ?

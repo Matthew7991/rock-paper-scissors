@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<title>Rock / paar Bier / Sister</title>
+		<title>Rock Paper Scissors</title>
 	</head>
 	<body>
 		<main>
 			<section>
-				<h1>Rock Paper Scissors</h1>
+				<h1>Rock / paar Bier / Sister</h1>
 				<div class="rounds">
 					<h2>How many rounds?</h2>
-					<div class="round-input">
+					<div class="rounds-input">
 						<div>
 							<input
 								type="radio"
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 					<div class="rounds-output hidden">
-						<p class="round-counter">0 / 0</p>
+						<p class="rounds-counter">0 / 0</p>
 					</div>
 				</div>
 				<div class="scores">
@@ -47,10 +47,23 @@
 				</div>
 				<p class="output">Let's Play</p>
 				<div class="buttons">
-					<button value="0"></button>
-					<button value="1"></button>
-					<button value="2"></button>
+					<button value="0">
+						<span>
+							<img src="./assets/img/rock.png" alt="Rock" />
+						</span>
+					</button>
+					<button value="1">
+						<span>
+							<img src="./assets/img/beers.png" alt="Beers" />
+						</span>
+					</button>
+					<button value="2">
+						<span>
+							<img src="./assets/img/sister.png" alt="Sister" />
+						</span>
+					</button>
 				</div>
+
 				<p>MAKE YOUR MOVE.</p>
 				<button class="reset">restart</button>
 			</section>
