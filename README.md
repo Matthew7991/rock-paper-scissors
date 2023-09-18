@@ -4,10 +4,10 @@ Welcome to the Rock Paper Scissors website, a platform that allows you to play t
 
 ## Features
 
-- **Search:** Easily search for Games by name.
-- **Details:** View comprehensive information about each Game, description, images, system requirements and more.
-- **Filter:** Filter by platform and genre.
-- **Sort:** Sort by relevance, popularity, release date or alphabetical.
+- **Rounds:** Choose how many rounds you want to play against the Computer
+- **Points:** See the current Score
+- **Win indication:** See if your last selection resulted in a Win, Draw, or Loss
+- **restart:** reset and select the amount of rounds again.
 
 ## Demo
 
